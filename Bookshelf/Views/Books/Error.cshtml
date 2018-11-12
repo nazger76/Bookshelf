@@ -1,0 +1,10 @@
+﻿@model Bookshelf.Models.ViewModels.BookViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h2 class="text-danger">Sorry! You cannot delete '@Model.Title' since @Model.BorrowerName still hasn't returned it!</h2>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

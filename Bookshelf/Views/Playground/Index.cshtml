@@ -1,0 +1,72 @@
+﻿<h2>Let's play!</h2>
+
+
+<hr />
+<h3>Ask me for a number and I will tell you if it is a power of 2!</h3>
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("PowerOfTwo", "Playground"))
+        {
+            <div class="form-group">
+                <input id="powerOfTwo" name="number" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Ask" class="btn btn-default" />
+            </div>
+        }
+
+        <h4 style="color:red">@ViewData["PowerOfTwo_Error"]</h4>
+        <h4 style="color:green">@ViewData["PowerOfTwo_Result"]</h4>
+    </div>
+</div>
+
+<hr />
+<h3>Reverse the string</h3>
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("Reverse", "Playground"))
+        {
+            <div class="form-group">
+                <input id="reverse" name="value" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Reverse" class="btn btn-default" />
+            </div>
+        }
+        <h4 style="color:green">@ViewData["Reverse_Result"]</h4>
+    </div>
+</div>
+
+<hr />
+<h3>Replicate the string</h3>
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("Replicate", "Playground"))
+        {
+            <div class="form-group">
+                <label class="control-label">Value to replicate</label>
+                <input id="replicate" name="value" class="form-control" />
+                <label class="control-label">Number of times</label>
+                <input id="noOfTimes" name="noOfTimes" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Replicate" class="btn btn-default" />
+            </div>
+        }
+        <h4 style="color:green">@ViewData["Replicate_Result"]</h4>
+    </div>
+</div>
+
+<hr />
+<h3>Print odd numbers between 0 and 100</h3>
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("PrintOddNumbers", "Playground"))
+        {           
+            <div class="form-group">
+                <input type="submit" value="Start" class="btn btn-default" />
+            </div>
+        }
+        <h4 style="color:green">@ViewData["PrintOddNumbers_Result"]</h4>
+    </div>
+</div>
